@@ -91,9 +91,12 @@ nav{
 }
 .card:hover{transform:translateY(-6px);border-color:var(--rose);box-shadow:0 30px 60px -24px rgba(0,0,0,.9),0 0 40px -14px var(--rose)}
 .card-art{aspect-ratio:16/10;display:grid;place-items:center;font-family:var(--script);font-size:2rem;position:relative;overflow:hidden}
-.card-art.noir{background:radial-gradient(120% 120% at 50% 0%,#3d0a14,#0a0206);color:var(--rose-light)}
+.card-art.bday{background:radial-gradient(120% 120% at 50% 0%,#fffaf2,#f6e0c6);color:#c23a56}
+.card-art.love{background:radial-gradient(120% 120% at 50% 0%,#48102e,#0d020a);color:#ff8fb3}
+.card-art.mom{background:radial-gradient(120% 120% at 50% 0%,#fff8f5,#f3d3cd);color:#b04a6e}
+.card-art.dadx{background:radial-gradient(120% 120% at 50% 0%,#16294a,#04080f);color:#e3c47a}
+.card-art.eid{background:radial-gradient(120% 120% at 50% 0%,#14523f,#03120b);color:#e8cd82}
 .card-art.blush{background:radial-gradient(120% 120% at 50% 0%,#e2edea,#c8ddd8);color:#5f424a}
-.card-art.eid{background:radial-gradient(120% 120% at 50% 0%,#1b3b3a,#0e2423);color:#f1d59a}
 .card-body{padding:20px 22px 24px;display:grid;gap:8px}
 .card-body b{font-family:var(--serif);font-weight:600;font-size:1.2rem;color:var(--rose-light)}
 .card-body p{font-size:.85rem;line-height:1.55;opacity:.72}
@@ -176,30 +179,54 @@ footer p{font-size:.72rem;opacity:.5;margin-top:10px}
 <!-- ================= DEMOS ================= -->
 <section id="demos">
   <div class="eyebrow reveal">live demos</div>
-  <h2 class="reveal">Three moods. <em>Endless</em> occasions.</h2>
-  <p class="sub reveal">Every card is a real website with its own private link — sent on WhatsApp, opened in one tap.</p>
+  <h2 class="reveal">Five occasions. <em>One</em> magical experience.</h2>
+  <p class="sub reveal">Every card is a real website with its own private link — sent on WhatsApp, opened in one tap. Tap any card to try it live.</p>
   <div class="cards">
-    <a class="card reveal" href="https://arcasif7.github.io/birthday-card/?to=You&from=WishLab&dob=2004-03-14&key=1403" target="_blank" rel="noopener">
-      <div class="card-art noir">Happy Birthday</div>
+    <a class="card reveal" href="https://arcasif7.github.io/birthday-card/?theme=birthday&to=You&from=WishLab&dob=2004-03-14&key=1403" target="_blank" rel="noopener">
+      <div class="card-art bday">Happy Birthday</div>
       <div class="card-body">
-        <b>Birthday Noir</b>
-        <p>Passkey lock → loading → age counter → photo memories → typed letter → a greeting written by an invisible pen.</p>
+        <b>Birthday — Confetti Cream</b>
+        <p>Passkey lock → age counter → sliding photo memories → typed letter → a greeting written by an invisible pen, under falling confetti.</p>
         <span>open demo → (passkey 1403)</span>
+      </div>
+    </a>
+    <a class="card reveal" href="https://arcasif7.github.io/birthday-card/?theme=love&to=Jaan&from=Yours&dob=2020-02-14&key=1402&pics=0" target="_blank" rel="noopener">
+      <div class="card-art love">I Love You</div>
+      <div class="card-body">
+        <b>Couples — Velvet Rouge</b>
+        <p>A candle-lit plum & rose night: "days we've been us" counter, your story in photos, and I-Love-You written in light.</p>
+        <span>open demo → (passkey 1402)</span>
+      </div>
+    </a>
+    <a class="card reveal" href="https://arcasif7.github.io/birthday-card/?theme=mom&to=Mama&from=Your%20children&pics=0" target="_blank" rel="noopener">
+      <div class="card-art mom">Happy Mother's Day</div>
+      <div class="card-body">
+        <b>Mother's Day — Rose Gold</b>
+        <p>Warm ivory & dusty rose with a tulip bouquet — falling petals, her moments, and a thank-you she'll keep forever.</p>
+        <span>open demo →</span>
+      </div>
+    </a>
+    <a class="card reveal" href="https://arcasif7.github.io/birthday-card/?theme=dad&to=Baba&from=Your%20children&pics=0" target="_blank" rel="noopener">
+      <div class="card-art dadx">Happy Father's Day</div>
+      <div class="card-body">
+        <b>Father's Day — Midnight Royale</b>
+        <p>Deep navy & brushed gold, a royal crown for your first hero — with star-sparkle skies and a golden written salute.</p>
+        <span>open demo →</span>
+      </div>
+    </a>
+    <a class="card reveal" href="https://arcasif7.github.io/birthday-card/?theme=eid&to=You&from=WishLab&pics=0" target="_blank" rel="noopener">
+      <div class="card-art eid">Eid Mubarak</div>
+      <div class="card-body">
+        <b>Eid — Emerald & Gold</b>
+        <p>An emerald night with a crescent, star and lantern — Eid Mubarak written in gold under drifting sparkles.</p>
+        <span>open demo →</span>
       </div>
     </a>
     <a class="card reveal" href="https://arcasif7.github.io/eid-magic-card/?to=You&from=WishLab" target="_blank" rel="noopener">
       <div class="card-art blush">Hello Friend</div>
       <div class="card-body">
-        <b>Blossom Letter</b>
+        <b>Bonus — Blossom Letter</b>
         <p>A soft papercraft envelope that opens itself — a kraft letter rises out while hand-painted blossoms bloom.</p>
-        <span>open demo →</span>
-      </div>
-    </a>
-    <a class="card reveal" href="https://arcasif7.github.io/eid-magic-card/?theme=eid&to=You&from=WishLab&g=Eid%20Mubarak&tag=EID" target="_blank" rel="noopener">
-      <div class="card-art eid">Eid Mubarak</div>
-      <div class="card-body">
-        <b>Eid Edition</b>
-        <p>The Blossom Letter in a festive deep-teal & gold palette — a warm Eid greeting for family and friends.</p>
         <span>open demo →</span>
       </div>
     </a>
@@ -311,7 +338,7 @@ document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 
 // WhatsApp ordering: set your number (digits only, country code, no +) and every
 // order button becomes a WhatsApp chat with a prefilled order template.
-const WHATSAPP_NUMBER = ""; // e.g. "9230XXXXXXXX"  ← apna number yahan
+const WHATSAPP_NUMBER = "923155957777";
 if (WHATSAPP_NUMBER) {
   const text = plan => encodeURIComponent(
     `Assalam o Alaikum! I want to order a WishLab card.\nPlan: ${plan}\nOccasion:\nTheir name:\nDate of birth:\nPasskey (4 digits):\nMy message:`);
