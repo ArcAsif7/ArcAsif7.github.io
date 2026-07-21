@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Be friendly to all major crawlers
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://getwishlab.com/sitemap.xml
