@@ -37,8 +37,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="dns-prefetch" href="https://card.getwishlab.com" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
 
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600;700&display=swap" /></noscript>
 <!-- ===== Structured data: Organization + WebSite + Service + FAQ ===== -->
 <script type="application/ld+json">
 {
@@ -254,7 +255,7 @@ footer p{font-size:.72rem;opacity:.5;margin-top:10px}
   </div>
   <div class="reveal">
     <div class="phone">
-      <iframe src="https://card.getwishlab.com/?to=You&from=WishLab" title="Live card demo" loading="lazy"></iframe>
+      <div id="demo-placeholder" style="height:100%;display:grid;place-content:center;text-align:center;padding:24px;gap:20px"><p style="font-size:26px;font-family:var(--serif)">A birthday surprise,<br>made for you.</p><button type="button" id="load-demo" class="btn" style="cursor:pointer;justify-content:center">Play live demo</button><p style="font-size:12px">Tap to load the interactive card.</p></div>
     </div>
     <div class="phone-note">↑ live — tap inside</div>
   </div>
@@ -417,6 +418,13 @@ footer p{font-size:.72rem;opacity:.5;margin-top:10px}
 </footer>
 
 <script>
+// Load the animated card only when requested; the direct demo links remain available.
+document.getElementById("load-demo").addEventListener("click", () => {
+  const frame = document.createElement("iframe");
+  frame.src = "https://card.getwishlab.com/?to=You&from=WishLab";
+  frame.title = "Live card demo";
+  document.getElementById("demo-placeholder").replaceWith(frame);
+});
 // scroll-reveal
 const io = new IntersectionObserver((es)=>{ for(const e of es) if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} },{threshold:.12});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
@@ -438,3 +446,4 @@ if (WHATSAPP_NUMBER) {
 </script>
 </body>
 </html>
+
